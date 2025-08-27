@@ -2,9 +2,6 @@
  const historyData = [];
 
 
-
-
-
 // Heart icon function
           let heartRate = parseInt(document.getElementById("heart-red").innerText);
           const heartIcons = document.getElementsByClassName("heart-icon");
@@ -71,16 +68,13 @@ for (const datas of historyData) {
     `;
     historyDiv.appendChild(div);
 }
-           
-
           }
         else{
             alert("❌ You don't have enough coins to make a call! ")
           }
 
           })
-          
-         
+            
         }
 
 
