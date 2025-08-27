@@ -91,9 +91,32 @@ for (const datas of historyData) {
 // History Clear function
 
 
-         const callButton1 = document.getElementById("clear");
-callButton1.addEventListener('click', function() {
+        document.getElementById("clear").addEventListener('click', function() {
     const historyDiv = document.getElementById("history");
     historyDiv.innerHTML = ""; 
     historyData.length = 0;    
 });
+
+
+
+// Copy funtion
+
+ 
+          let copyIcon = parseInt(document.getElementById("copy-icon").innerText);
+          const copyButton = document.getElementsByClassName("copy-btn");
+
+        for(let copyBtn of copyButton){
+        copyBtn.addEventListener('click', function() {
+    const parent = this.parentElement.parentElement;  
+    const text = parent.querySelector(".copy-me").innerText;
+    navigator.clipboard.writeText(text);
+
+    alert("Copied: " + text);
+  
+    copyIcon++;
+    document.getElementById("copy-icon").innerText = copyIcon;
+    
+  })}
+   
+
+
