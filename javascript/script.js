@@ -10,7 +10,6 @@
         heartIcon.addEventListener('click', function() {
     heartRate++;
     document.getElementById("heart-red").innerText = heartRate;
-    
   })};
 
 
